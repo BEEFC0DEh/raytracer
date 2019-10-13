@@ -41,22 +41,22 @@ class Framebuffer
 public:
     explicit Framebuffer(std::size_t width = 0, std::size_t height = 0): m_data(width * height), m_width{width}, m_height{height} {}
 
-    const std::vector<Vec3f>& data() const
+    [[nodiscard]] const std::vector<Vec3f>& data() const
     {
         return m_data;
     }
 
-    std::vector<Vec3f>& data()
+    [[nodiscard]] std::vector<Vec3f>& data()
     {
         return m_data;
     }
 
-    std::size_t width() const
+    [[nodiscard]] std::size_t width() const
     {
         return m_width;
     }
 
-    std::size_t height() const
+    [[nodiscard]] std::size_t height() const
     {
         return m_height;
     }
